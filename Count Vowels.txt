@@ -1,0 +1,24 @@
+package javadsa;
+
+import java.util.Stack;
+
+//find largest elemt and second largest elemetn
+public class exam111 {
+   
+    public static int Vovels(String str){
+        int count=0;
+        char Arry[]=str.toCharArray();
+        for(int i=0;i<=Arry.length-1;i++){
+            if(Arry[i]=='a'|| Arry[i]=='e'|| Arry[i]=='o'|| Arry[i]=='u'||Arry[i]=='i' ){
+                count++;
+            }
+        }
+        return count;
+    }
+    public static void main(String[] args) {
+        String str="pavan";
+        int numberOfovales=exam111.Vovels(str);
+        System.out.println("number of vovals in String is" + numberOfovales);
+    }
+          
+}
