@@ -1,0 +1,50 @@
+
+reversed String using Stack
+package javadsa;
+
+import java.util.Stack;
+
+//find largest elemt and second largest elemetn
+public class exam111 {
+    public static String Revser(String Str){
+        Stack<Character> st1=new Stack<>();
+       for(char c:Str.toCharArray()){
+        st1.push(c);
+       }
+       StringBuilder reverString=new StringBuilder();
+       while (!st1.isEmpty()) {
+            reverString.append(st1.pop());
+       }
+       return reverString.toString();
+    }
+    
+    public static void main(String[] args) {
+        String str="pavan";
+        String ReverseString=exam111.Revser(str);
+        System.out.println(ReverseString);
+    }
+          
+}
+
+**************************************************************************************************************Simple method************************
+
+public class exam111 {
+   
+    public static String Revser(String str){
+        int x=0;
+        char arr[]=str.toCharArray();
+        char arr2[]=new char[arr.length];
+        for(int i=arr.length-1;i>=0;i--){
+            arr2[x]=arr[i];
+            x++;
+        }
+        String reveString=String.valueOf(arr2);
+        return reveString;
+    }
+    public static void main(String[] args) {
+        String str="pavan";
+        String ReverseString=exam111.Revser(str);
+        System.out.println(ReverseString);
+    }
+          
+}
